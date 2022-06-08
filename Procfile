@@ -1,2 +1,2 @@
-web: node index.js
+web: npm i && npm run build && npm start --port $PORT
 
