@@ -1,4 +1,4 @@
-var { faker } = require("@faker-js/faker");
+var { faker } = require("faker");
 const rdn_boolean = require("../common/index");
 function get() {
   let reply = [];
