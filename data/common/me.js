@@ -10,8 +10,8 @@ function get() {
         gender:faker.name.gender(true),
         job_title: faker.name.jobTitle(),
         job_area:faker.name.jobArea(),
-        story: rdn_boolean.get()
-
+        story: rdn_boolean.get(),
+        status: faker.lorem.words()
     };
 }
  
