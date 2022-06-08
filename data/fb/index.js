@@ -1,8 +1,7 @@
-const me = require('../common/me')
-function process(router) { 
+import me from '../common/me.js'
+
+export function fb(router) { 
     router.get('/fb/me', function(request, response) {
-        response.send(me.get());
+        response.send(me());
     })
 }
-
-module.exports = { process };

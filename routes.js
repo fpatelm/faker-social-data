@@ -1,9 +1,10 @@
-const fb = require('./data/fb/index')
-const whatsapp = require('./data/whatsapp/index')
-const express = require('express');
+import {fb} from './data/fb/index.js'
+import {whatsapp} from './data/whatsapp/index.js'
+import express from 'express'
+
 const router = express.Router();
 
-fb.process(router);
-whatsapp.process(router);
+fb(router);
+whatsapp(router);
 
-module.exports = router;
+export let route = router;

@@ -1,24 +1,27 @@
-const me = require('../common/me')
-const chats = require('./chats')
-const message = require('./message')
-const calls = require('./calls')
+import  me  from '../common/me.js'
+import { chats } from './chats.js'
+import { message } from './message.js'
+import { calls } from './calls.js'
+import { people } from './people.js'
 
-function process(router) { 
+export function whatsapp(router) { 
     router.get('/whatsapp/me', function(request, response) {
-        response.send(me.get());
+        response.send(me());
     })
 
     router.get('/whatsapp/chats', function(request, response) {
-        response.send(chats.get());
+        response.send(chats());
     })
 
     router.get('/whatsapp/message', function(request, response) {
-        response.send(message.get());
+        response.send(message());
     })
 
     router.get('/whatsapp/calls', function(request, response) {
-        response.send(calls.get());
+        response.send(calls());
+    })
+
+    router.get('/whatsapp/people', function(request, response) {
+        response.send(people());
     })
 }
-
-module.exports = { process };

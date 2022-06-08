@@ -1,6 +1,7 @@
-var { faker } = require('faker')
-const rdn_boolean = require("./index");
-function get() {
+import { faker } from '@faker-js/faker';
+import {rdn_boolean } from './index.js'
+
+export default function me() { 
     return {
         firstname: faker.name.firstName(),
         lastname: faker.name.lastName(),
@@ -10,9 +11,7 @@ function get() {
         gender:faker.name.gender(true),
         job_title: faker.name.jobTitle(),
         job_area:faker.name.jobArea(),
-        story: rdn_boolean.get(),
+        story: rdn_boolean(),
         status: faker.lorem.words()
     };
 }
- 
-module.exports = { get };
