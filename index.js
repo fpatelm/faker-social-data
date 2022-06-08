@@ -1,14 +1,8 @@
-const fb = require('./data/fb/index')
-const whatsapp = require ('./data/whatsapp/index')
+const routes = require("./routes");
 var express = require('express')
 var app = express()
+const port = process.env.PORT || "5000";
 
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
-
-fb.process(app);
-whatsapp.process(app);
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
-})
+app.set('port', port);
+app.use('/', routes);
+app.listen(port, () => console.log(`Node app is running at localhost: ${port}`))
