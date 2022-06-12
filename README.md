@@ -1,4 +1,4 @@
-<h1>Fake social dummy data to use in any development UI</h1>
+<h1>Fake social dummy data to use in any UI development</h1>
 
 <p>New random data every request</p>
 <h3>Facebook</h3>
