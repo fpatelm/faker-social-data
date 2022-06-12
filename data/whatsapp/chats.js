@@ -5,6 +5,7 @@ export function chats() {
   for (let i = 0; i < faker.random.numeric(2); i++) {
     reply.push({
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+      avatar: faker.image.avatar(),
       msg: faker.lorem.sentence(15),
       date: faker.date.month(),
       count: faker.random.numeric(),
