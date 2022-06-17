@@ -5,6 +5,7 @@ export function calls() {
   for (let i = 0; i < faker.random.numeric(2); i++) {
     reply.push({
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+      avatar: faker.image.avatar(),
       date: faker.date.month(),
       outbound: rdn_boolean(),
       type: faker.system.commonFileType(),
