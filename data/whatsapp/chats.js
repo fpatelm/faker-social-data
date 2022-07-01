@@ -6,7 +6,7 @@ export function chats() {
     reply.push({
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
       avatar: faker.image.avatar(),
-      msg: faker.lorem.sentence(15),
+      msg: faker.lorem.sentence(3),
       date: faker.date.month(),
       count: faker.random.numeric(),
       story: rdn_boolean(),
