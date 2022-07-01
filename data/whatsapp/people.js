@@ -13,7 +13,7 @@ export function people() {
     reply.push({
       firstName: faker.name.firstName(),
       lastName:faker.name.lastName(),
-      msg: faker.lorem.sentence(15),
+      msg: faker.lorem.sentence(3),
       date: faker.date.month(),
       count: faker.random.numeric(),
       story: isStory,
