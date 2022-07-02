@@ -3,7 +3,7 @@ import {rdn_boolean } from '../common/index.js'
 export function people() {
   let reply = [];
   for (let i = 0; i < faker.random.numeric(2); i++) {
-    let isStory = rdn_boolean();
+    let isStory = faker.datatype.boolean();
     let stories = [];
     if (isStory) { 
       for (let i = 0; i < faker.random.numeric(2); i++) {

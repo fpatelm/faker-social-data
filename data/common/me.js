@@ -1,9 +1,8 @@
 import { faker } from '@faker-js/faker';
-import {rdn_boolean } from './index.js'
 
 export default function me() { 
 
-    let isStory = rdn_boolean();
+    let isStory = faker.datatype.boolean();
     let stories = [];
     if (isStory) { 
       for (let i = 0; i < faker.random.numeric(2); i++) {
@@ -16,7 +15,7 @@ export default function me() {
         lastname: faker.name.lastName(),
         avatar: faker.image.avatar(),
         city: faker.address.city(),
-        relationship:'Single',
+        relationship:faker.helpers.arrayElement(['Single', 'Married', 'Divorced', 'Widowed', 'Cohabiting']),
         gender:faker.name.gender(true),
         job_title: faker.name.jobTitle(),
         job_area:faker.name.jobArea(),

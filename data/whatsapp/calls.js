@@ -7,7 +7,8 @@ export function calls() {
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
       avatar: faker.image.avatar(),
       date: faker.date.month(),
-      outbound: rdn_boolean(),
+      outbound: faker.helpers.arrayElement(['Missed', 'Incoming', 'Outgoing']),
+      count: faker.random.numeric(),
       type: faker.system.commonFileType(),
     });
   }
